@@ -1,0 +1,17 @@
+<div class="search" ng-controller="SearchController">
+	<div class="block">
+		<form ng-submit="toSearch()">
+			<input class="input" type="text" ng-model="q" ng-keydown="curChange($event)">
+			<button class="submit" type="submit">
+				<i class="fa fa-search"></i>
+			</button>
+		</form>
+	</div>
+
+	<ul class="list">
+		<li ng-class="curClass($index)" ng-repeat="item in list" ng-click="addSearch(item.n)">
+			<img ng-src="{{item.cover}}">
+			<div class="cnt">{{item.n}}</div>
+		</li>
+	</ul>
+</div>

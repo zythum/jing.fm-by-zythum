@@ -1,0 +1,74 @@
+<div class="player" ng-controller="PlayerController">
+	<div class="f" ng-class="settingClass()">
+		<div class="f_left">
+			<div class="back">
+				<div class="bg">
+					<div class="img" ng-style="{backgroundImage:'url('+pld.cover+')'}"></div>
+				</div>
+				<div class="mask"></div>
+			</div>
+			<div class="front">
+				<div class="head">
+					<div class="left">
+						<i ng-click="hide()" class="fa fa-times"></i>
+					</div>
+					<div class="right">
+						<i ng-click="toggleSetting(true);$event.stopPropagation()" class="fa fa-bars"></i>
+					</div>
+					<div class="title" ng-bind="q"></div>
+				</div>
+				<div class="song">
+					<div class="line"></div>
+					<div class="cover">
+						<div class="img" ng-class="{false:'stop'}[playing]" ng-style="{backgroundImage:'url('+pld.cover+')'}"></div>
+						<div class="mask">
+							<div class="m1"></div>
+							<div class="m2"></div>
+							<div class="m3" ng-click="tooglePlay()"><i ng-class="playOrPauseIcon()" class="fa"></i></div>
+						</div>
+					</div>
+					<div class="info">
+						<h1 ng-bind="pld.n"></h1>
+						<p>
+							<span ng-bind="pld.atn"></span>
+							·
+							<span ng-bind="pld.an"></span>
+						</p>				
+					</div>
+				</div>		
+				<div class="ctrlbar">
+					<div class="line"></div>
+					<ul class="btns"><li class="block">
+
+					<i ng-click="notLike()" class="fa fa-trash-o"></i>
+
+					</li><li class="block">
+					
+					<i ng-click="toogleStar()" ng-class="starOrnotIcon()" class="fa"></i>
+
+					</li><li class="block">
+
+					<i ng-click="next()" class="fa fa-forward"></i>
+
+					</li></ul>
+				</div>
+			</div>
+		</div>
+		<div class="f_right">
+			<div class="area">
+				<div ng-include="settingModTpl()"></div>
+			</div>
+			<ul class="tab"><li ng-click="toggleSetting(false)" class="half">
+				<i class="fa fa-angle-left"></i>
+			</li><li ng-click="setSettingMod('search')" ng-class="isSettingModToToggleClass('search')">
+				<i class="fa fa-search"></i>
+			</li><li ng-click="setSettingMod('star')" ng-class="isSettingModToToggleClass('star')">
+				<i class="fa fa-star"></i>
+			</li><li ng-click="setSettingMod('top')" ng-class="isSettingModToToggleClass('top')">
+				<i class="fa fa-bar-chart-o"></i>
+			</li><li ng-click="setSettingMod('setting')" ng-class="isSettingModToToggleClass('setting')">
+				<i class="fa fa-user"></i>
+			</li></ul>
+		</div>
+	</div>
+</div>

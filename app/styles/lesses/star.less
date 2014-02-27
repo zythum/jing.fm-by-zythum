@@ -1,0 +1,70 @@
+.area .star{
+	position: absolute;
+	top:0;left:0;bottom:0;right:0;
+	overflow:auto;
+	.starlist{
+		width:100%;
+		color:#aaa;
+		text-shadow:0 0 2px rgba(0,0,0,0.5);
+		li{
+			clear:both;
+			height:40px;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+			img{
+				width:34px;
+				height:34px;
+				border-radius: 4px;
+				box-shadow: 0 0 2px #000;
+				float:left;
+				margin:3px 0 3px 10px;
+			}
+			.b-star{
+				width:40px;
+				height:40px;
+				float:right;
+				text-align: center;
+				line-height:40px;
+				color:rgb(185, 91, 173);
+			}
+			.cnt{
+				margin-left: 55px;
+				.title{
+					color:#ddd;
+					font-size:12px;
+					padding-top:8px;
+					height: 13px;
+					line-height:13px;
+					text-overflow:ellipsis;
+					white-space:nowrap;
+					overflow:hidden;
+					background: #333;
+				}
+				.desc{
+					padding-top:2px;
+					font-size:10px;
+					text-overflow:ellipsis;
+					white-space:nowrap;
+					overflow:hidden;
+				}
+			}
+			&.fetch{
+				text-align:center;
+				line-height:40px;
+			}
+			& .toStar{
+				margin: 10px auto 0;
+				width:216px;
+				color:#fff;
+				height: 28px;
+				line-height: 28px;
+				text-align:center;
+				background: rgb(147, 206, 106);
+				border-radius: 3px;
+				box-shadow:1px 1px 3px #000;
+				&:active{
+					box-shadow:0px 0px 15px rgba(0,0,0,0.5) inset;
+				};
+			}
+		}
+	}
+}

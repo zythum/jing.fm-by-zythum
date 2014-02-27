@@ -1,0 +1,26 @@
+<div class="login" ng-controller="LoginController">
+	<div class="back"></div>
+	<div class="front">
+		<div class="title">
+			Jing<span>.FM</span>
+		</div>
+		<form ng-submit="submit()">
+			<div class="block">
+				<div class="label"><i class="fa fa-user"></i></div>
+				<input ng-model="email" class="input" autofocus type="text" placeholder="你的Email">
+			</div>
+			<div class="block">
+				<div class="label"><i class="fa fa-key"></i></div>			
+				<input ng-model="password" class="input" type="password" placeholder="输入你的密码">
+				<button class="submit" type="submit"><i ng-class="{true: 'fa-refresh fa-spin', false: 'fa-sign-in'}[loading]" class="fa"></i></button>
+			</div>
+			
+			<div class="error" ng-if="error" ng-bind="error"></div>
+			
+		</form>
+		<div class="foot" ng-click="open('http://jing.fm')">
+			<p><u>注册 · 忘记密码</u></p>
+			<p>抱歉-暂时只支持邮箱登陆</p>
+		</div>
+	</div>	
+</div>

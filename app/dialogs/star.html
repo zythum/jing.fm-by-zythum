@@ -1,0 +1,21 @@
+<div class="star" ng-controller="StarController">
+	<ul class="starlist">
+		<li ng-if="total" ng-click="toStar()">
+			<div class="toStar">星 标 <i class="fa fa-star"></i> 电 台</div>
+		</li>
+		<li ng-repeat="song in starSongs">
+			<img ng-src="{{song.cover}}">
+			<div class="b-star">
+				<i ng-click="cancelStar($index)" class="fa fa-star"></i>
+			</div>
+			<div class="cnt">
+				<div class="title" ng-bind="song.tit"></div>
+				<div class="desc">
+					<span ng-bind="song.at"></span> · 
+					<span ng-bind="song.al"></span>
+				</div>
+			</div>
+		</li>
+		<li class="fetch" ng-click="fetch()" ng-if="starSongs.length != total" ng-bind="fetchText()"></li>
+	</ul>
+</div>

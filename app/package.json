@@ -1,0 +1,15 @@
+{
+    "name": "JING.FM", //程序名
+    "main": "dialogs/jing.html", //入口
+    "window": {
+        "title": "JING.FM",
+        "toolbar": false,
+        "frame": false,
+        "width": 240,
+        "height": 330,
+        "show": false,
+        "position": "mouse",
+        "resizable": false,
+        "transparent": true
+    }
+}

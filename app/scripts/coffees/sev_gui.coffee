@@ -1,0 +1,1 @@
+window.App.factory 'gui', -> window.require 'gui'

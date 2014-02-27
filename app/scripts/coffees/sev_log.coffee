@@ -1,0 +1,1 @@
+window.App.factory 'log', -> (msg)-> console.log msg

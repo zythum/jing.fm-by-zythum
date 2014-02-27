@@ -1,0 +1,24 @@
+// CoffeeScript project settings, you can edit it and set custom settings.
+{
+	// The mappings of source directory and output directory
+	"mappings": [
+		{	
+			"src": "coffees",
+			"dest": "./"
+		}
+	],
+
+	// Add the ignore rules that Koala will not search them.
+	// e.g. ["*.json", "*.txt", "test", "path/libs"]
+	"ignores": ["*.js"],
+
+	// Compile options of CoffeeScript.
+	"options": {
+
+		// Compile without a top-level function wrapper.
+		"bare": false,
+
+		// Treat stdio as literate style coffee-script.
+		"literate": false
+	}
+}

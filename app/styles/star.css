@@ -1,0 +1,73 @@
+.area .star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+.area .star .starlist {
+  width: 100%;
+  color: #aaa;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.area .star .starlist li {
+  clear: both;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.area .star .starlist li img {
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #000;
+  float: left;
+  margin: 3px 0 3px 10px;
+}
+.area .star .starlist li .b-star {
+  width: 40px;
+  height: 40px;
+  float: right;
+  text-align: center;
+  line-height: 40px;
+  color: #b95bad;
+}
+.area .star .starlist li .cnt {
+  margin-left: 55px;
+}
+.area .star .starlist li .cnt .title {
+  color: #ddd;
+  font-size: 12px;
+  padding-top: 8px;
+  height: 13px;
+  line-height: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #333;
+}
+.area .star .starlist li .cnt .desc {
+  padding-top: 2px;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.area .star .starlist li.fetch {
+  text-align: center;
+  line-height: 40px;
+}
+.area .star .starlist li .toStar {
+  margin: 10px auto 0;
+  width: 216px;
+  color: #fff;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background: #93ce6a;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #000;
+}
+.area .star .starlist li .toStar:active {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) inset;
+}

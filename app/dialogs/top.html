@@ -1,0 +1,28 @@
+<div class="top" ng-controller="TopController">
+	<div class="f" ng-class="nextModeClass()">
+		<div class="f_left">
+			<ul class="list">
+				<li ng-repeat="top in tops" ng-click="next($index)">
+					<img ng-src="{{top.cover}}">
+					<div class="next">
+						<i class="fa fa-angle-right"></i>
+					</div>
+					<div class="cnt" ng-bind="top.title"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="f_right">
+			<div ng-if="child.title" class="title" ng-bind="child.title"></div>
+			<ul class="l">
+				<li ng-repeat="item in child.items">
+					<div class="title" ng-bind="item.title"></div>
+					<ul class="l2">
+						<li ng-repeat="i in item.items" ng-bind="i.name" ng-click="ok(i, child.title, item.title, i.name)"></li>
+					</ul>
+				</li>
+			</ul>
+			<div ng-if="loading" class="loading">Loading...</div>
+		</div>
+	</div>
+	
+</div>

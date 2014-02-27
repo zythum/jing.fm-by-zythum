@@ -1,0 +1,30 @@
+.area .setting{
+	position: absolute;
+	top:0;left:0;bottom:0;right:0;
+	overflow:auto;
+	.settinglist{
+		width:100%;
+		color:#aaa;
+		text-shadow:0 0 2px rgba(0,0,0,0.5);
+		li{
+			clear:both;
+			height:40px;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+			
+			.btn{
+				margin: 10px auto 0;
+				width:216px;
+				color:#fff;
+				height: 28px;
+				line-height: 28px;
+				text-align:center;
+				background: rgb(147, 206, 106);
+				border-radius: 3px;
+				box-shadow:1px 1px 3px #000;
+				&:active{
+					box-shadow:0px 0px 15px rgba(0,0,0,0.5) inset;
+				};
+			}
+		}
+	}
+}
